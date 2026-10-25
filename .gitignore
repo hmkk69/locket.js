@@ -1,0 +1,6 @@
+node_modules/
+npm-debug.log
+*.session.json
+my_moments_*.json
+chat_history.json
+.DS_Store
