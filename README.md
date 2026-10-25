@@ -16,11 +16,11 @@
 
 ## Documentation map
 
-> **You are here: README** — the front page. Read this to understand what the library does and whether it suits your needs.
+> **You are here: README** - the front page. Read this to understand what the library does and whether it suits your needs.
 
 | If you want to... | Go to |
 |:---|:---|
-| **Install & run your first snippet** | You're in the right place — see [Quick Start](#-quick-start) below |
+| **Install & run your first snippet** | You're in the right place - see [Quick Start](#-quick-start) below |
 | **Integrate into your project step by step** | [INTEGRATION.md](https://github.com/hmkk69/locket.js/blob/main/docs/INTEGRATION.md) (EN) · [INTEGRATION_VI.md](https://github.com/hmkk69/locket.js/blob/main/docs/INTEGRATION_VI.md) (VI) |
 | **Look up a specific method / parameter** | [FEATURES.md](https://github.com/hmkk69/locket.js/blob/main/docs/FEATURES.md) (EN) · [FEATURES_VI.md](https://github.com/hmkk69/locket.js/blob/main/docs/FEATURES_VI.md) (VI) |
 | **Copy-paste complete working scripts** | [examples/en/](https://github.com/hmkk69/locket.js/tree/main/examples/en/) (EN) · [examples/vi/](https://github.com/hmkk69/locket.js/tree/main/examples/vi/) (VI) |
@@ -409,7 +409,7 @@ python examples/en/interactive_demo.py
 |:---|:---|
 | [ docs/INTEGRATION.md](https://github.com/hmkk69/locket.js/blob/main/docs/INTEGRATION.md) | Step-by-step integration guide with real code snippets for every feature (EN - Primary) |
 | [ docs/INTEGRATION_VI.md](https://github.com/hmkk69/locket.js/blob/main/docs/INTEGRATION_VI.md) | Step-by-step integration guide in Vietnamese (VI - Secondary) |
-| [ docs/FEATURES.md](https://github.com/hmkk69/locket.js/blob/main/docs/FEATURES.md) | Full API catalog — all classes, methods and parameters (EN) |
+| [ docs/FEATURES.md](https://github.com/hmkk69/locket.js/blob/main/docs/FEATURES.md) | Full API catalog - all classes, methods and parameters (EN) |
 | [ docs/FEATURES_VI.md](https://github.com/hmkk69/locket.js/blob/main/docs/FEATURES_VI.md) | Full API catalog in Vietnamese (VI) |
 | [ examples/en/](https://github.com/hmkk69/locket.js/tree/main/examples/en/) | 8 complete runnable example scripts (English) |
 | [ examples/vi/](https://github.com/hmkk69/locket.js/tree/main/examples/vi/) | 8 complete runnable example scripts (Vietnamese) |
