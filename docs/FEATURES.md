@@ -10,7 +10,7 @@
 | **Complete runnable scripts** | [examples/en/](../examples/en/) (EN) · [examples/vi/](../examples/vi/) (VI) |
 | **Vietnamese version of this catalog** | [FEATURES_VI.md](FEATURES_VI.md) |
 
-> **Version**: 0.0.1 · **Package**: [locket.js](https://www.npmjs.com/package/locket.js) · **Author**: LAMDev x DaLyMMO.com · **License**: MIT
+> **Version**: 0.0.1 · **Package**: [locket.js](https://www.npmjs.com/package/locket.js) · **Author**: Hmk8386 · **License**: MIT
 
 ---
 
@@ -250,7 +250,7 @@ npm publish
 
 ## Copyright & license
 
-Copyright © 2026 **LAMDev x DaLyMMO.com**. All rights reserved.
+Copyright © 2026 **Hmk8386**. All rights reserved.
 
 Distributed under the [MIT License](../LICENSE).
 
