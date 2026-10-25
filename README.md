@@ -44,7 +44,6 @@
  - [7. Error handling](#7-error-handling)
 - [Examples](#-examples)
 - [Contributing](#-contributing)
-- [Support & donations (sponsor)](#-support--donations-sponsor)
 - [Copyright & license](#-copyright--license)
 - [Disclaimer](#-disclaimer)
 
