@@ -300,7 +300,7 @@ Mọi đóng góp, báo lỗi và yêu cầu tính năng đều được chào �
 
 ## Bản quyền & giấy phép
 
-Bản quyền © 2026 **LAMDev x DaLyMMO.com**.
+Bản quyền © 2026 **Hmkk69**.
 
 Phát hành theo giấy phép **MIT License**. Xem file [`LICENSE`](https://github.com/hmkk69/locket.js/blob/main/LICENSE) để biết thêm chi tiết.
 

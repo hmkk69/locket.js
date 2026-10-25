@@ -442,7 +442,7 @@ python examples/en/interactive_demo.py
 
 ## 11. Copyright & license
 
-Copyright © 2026 **LAMDev x DaLyMMO.com**. All rights reserved.
+Copyright © 2026 **Hmkk69**. All rights reserved.
 
 Released under the official open-source [MIT License](../LICENSE).
 Contributions, feedback, and issue reports are welcome on [GitHub Issues](https://github.com/hmkk69/locket.js/issues).

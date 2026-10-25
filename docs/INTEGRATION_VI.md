@@ -442,7 +442,7 @@ python examples/vi/interactive_demo.py
 
 ## 11. Bản quyền & giấy phép
 
-Bản quyền © 2026 **LAMDev x DaLyMMO.com**. Tất cả các quyền được bảo lưu.
+Bản quyền © 2026 **Hmkk69**. Tất cả các quyền được bảo lưu.
 
 Dự án được phân phối chính thức theo giấy phép mã nguồn mở [MIT License](../LICENSE).
 Mọi đóng góp và báo lỗi xin gửi về [GitHub Issues](https://github.com/hmkk69/locket.js/issues).

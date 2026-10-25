@@ -436,7 +436,7 @@ Contributions, bug reports, and feature requests are welcome!
 
 ## Copyright & license
 
-Copyright © 2026 **LAMDev x DaLyMMO.com**.
+Copyright © 2026 **Hmkk69**.
 
 Distributed under the **MIT License**. See [`LICENSE`](https://github.com/hmkk69/locket.js/blob/main/LICENSE) for more information.
 

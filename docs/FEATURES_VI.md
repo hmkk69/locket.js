@@ -10,7 +10,7 @@
 | **Script mẫu chạy được ngay** | [examples/vi/](../examples/vi/) (VI) · [examples/en/](../examples/en/) (EN) |
 | **Bản tiếng Anh (Bản chính)** | [FEATURES.md](FEATURES.md) |
 
-> **Phiên bản**: 0.0.1 · **Gói npm**: [locket.js](https://www.npmjs.com/package/locket.js) · **Tác giả**: LAMDev x DaLyMMO.com · **Giấy phép**: MIT
+> **Phiên bản**: 0.0.1 · **Gói npm**: [locket.js](https://www.npmjs.com/package/locket.js) · **Tác giả**: Hmkk69 · **Giấy phép**: MIT
 
 
 ## Mục lục
@@ -284,7 +284,7 @@ npm publish
 
 ## Bản quyền & giấy phép
 
-Bản quyền © 2026 **LAMDev x DaLyMMO.com**. Tất cả các quyền được bảo lưu.
+Bản quyền © 2026 **Hmkk69**. Tất cả các quyền được bảo lưu.
 
 Phát hành theo giấy phép mã nguồn mở [MIT License](../LICENSE).
 
