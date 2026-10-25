@@ -1,11 +1,7 @@
-﻿# locket.js - Thư Viện Node.js Toàn Diện Cho Locket Camera
+﻿# Locket.js - SDK Node.js không chính thức dành cho Locket Camera
 
 <p align="center">
- <img src="https://raw.githubusercontent.com/hmkk69/locket.js/main/assets/banner.png" alt="locket.js Banner" width="700" onerror="this.style.display='none'"/>
-</p>
-
-<p align="center">
- <b>Thư viện Node.js SDK mã nguồn mở điều khiển Locket Camera với giả lập phần cứng thiết bị Apple iOS chính hãng 100%.</b>
+ <b>Thư viện client Node.js không chính thức dành cho Locket Camera</b>
 </p>
 
 <p align="center">
@@ -19,14 +15,14 @@
 
 ## Bản đồ tài liệu
 
-> **Bạn đang ở: README_VI** — trang giới thiệu chính. Đọc để hiểu thư viện làm được gì và có phù hợp với nhu cầu của bạn không.
+> **Bạn đang ở: README_VI** - trang giới thiệu chính. Đọc để hiểu thư viện làm được gì và có phù hợp với nhu cầu của bạn không.
 
 | Bạn muốn... | Đi đến |
 |:---|:---|
-| **Cài đặt và chạy thử nhanh** | Đúng chỗ rồi — xem [Khởi Đầu Nhanh](#-khởi-đầu-nhanh) bên dưới |
+| **Cài đặt và chạy thử nhanh** | Đúng chỗ rồi - xem [Khởi Đầu Nhanh](#-khởi-đầu-nhanh) bên dưới |
 | **Tích hợp vào dự án của mình từng bước** | [INTEGRATION_VI.md](https://github.com/hmkk69/locket.js/blob/main/docs/INTEGRATION_VI.md) (VI) · [INTEGRATION.md](https://github.com/hmkk69/locket.js/blob/main/docs/INTEGRATION.md) (EN) |
 | **Tra cứu method, tham số cụ thể** | [FEATURES_VI.md](https://github.com/hmkk69/locket.js/blob/main/docs/FEATURES_VI.md) (VI) · [FEATURES.md](https://github.com/hmkk69/locket.js/blob/main/docs/FEATURES.md) (EN) |
-| **Xem code mẫu chạy được ngay** | [examples/vi/](https://github.com/hmkk69/locket.js/tree/main/examples/vi/) — 8 script hoàn chỉnh theo từng tính năng |
+| **Xem code mẫu chạy được ngay** | [examples/vi/](https://github.com/hmkk69/locket.js/tree/main/examples/vi/) - 8 script hoàn chỉnh theo từng tính năng |
 | **Đọc trang này bằng tiếng Anh** | [README.md](https://github.com/hmkk69/locket.js/blob/main/README.md) |
 
 ---
@@ -47,7 +43,6 @@
 - [Ví dụ mẫu (examples)](#-ví-dụ-mẫu-examples)
 - [Tiếp theo](#-tiếp-theo)
 - [Đóng góp](#-đóng-góp)
-- [Ủng hộ & quyên góp (sponsor)](#-ủng-hộ--quyên-góp-sponsor)
 - [Bản quyền & giấy phép](#-bản-quyền--giấy-phép)
 - [Tuyên bố miễn trừ trách nhiệm](#-tuyên-bố-miễn-trừ-trách-nhiệm)
 
@@ -275,8 +270,8 @@ python examples/vi/interactive_demo.py
 |:---|:---|
 | [ docs/INTEGRATION.md](https://github.com/hmkk69/locket.js/blob/main/docs/INTEGRATION.md) | Hướng dẫn tích hợp từng bước kèm code mẫu chi tiết (Bản chính - EN) |
 | [ docs/INTEGRATION_VI.md](https://github.com/hmkk69/locket.js/blob/main/docs/INTEGRATION_VI.md) | Hướng dẫn tích hợp từng bước kèm code mẫu chi tiết (Bản phụ - VI) |
-| [ docs/FEATURES.md](https://github.com/hmkk69/locket.js/blob/main/docs/FEATURES.md) | Danh mục API đầy đủ — toàn bộ lớp, phương thức và tham số (EN) |
-| [ docs/FEATURES_VI.md](https://github.com/hmkk69/locket.js/blob/main/docs/FEATURES_VI.md) | Danh mục API đầy đủ — toàn bộ lớp, phương thức và tham số (VI) |
+| [ docs/FEATURES.md](https://github.com/hmkk69/locket.js/blob/main/docs/FEATURES.md) | Danh mục API đầy đủ - toàn bộ lớp, phương thức và tham số (EN) |
+| [ docs/FEATURES_VI.md](https://github.com/hmkk69/locket.js/blob/main/docs/FEATURES_VI.md) | Danh mục API đầy đủ - toàn bộ lớp, phương thức và tham số (VI) |
 | [ examples/vi/](https://github.com/hmkk69/locket.js/tree/main/examples/vi/) | 8 script mẫu chạy được ngay theo từng tính năng (Tiếng Việt) |
 | [ examples/en/](https://github.com/hmkk69/locket.js/tree/main/examples/en/) | 8 example scripts (English) |
 
@@ -304,6 +299,7 @@ Bản quyền © 2026 **Hmkk69**.
 
 Phát hành theo giấy phép **MIT License**. Xem file [`LICENSE`](https://github.com/hmkk69/locket.js/blob/main/LICENSE) để biết thêm chi tiết.
 
+Được sự đồng ý của chủ dự án gốc [LocketLam](https://github.com/leanhminh2104/locketlam), mình đã port dự án sang Node.js để cho ai không dung Python hoặc muốn dung Node.js.
 ---
 
 ## Tuyên bố miễn trừ trách nhiệm
