@@ -1,11 +1,7 @@
-﻿# Locket.js - The Ultimate Node.js SDK for Locket Camera
+﻿# Locket.js - The unofficial Node.js SDK for Locket Camera
 
 <p align="center">
- <img src="https://raw.githubusercontent.com/hmkk69/locket.js/main/assets/banner.png" alt="locket.js Banner" width="700" onerror="this.style.display='none'"/>
-</p>
-
-<p align="center">
- <b>A production-ready, feature-complete Node.js client library for Locket Camera with authentic iOS hardware simulation.</b>
+ <b>Unofficial Node.js client library for Locket Camera</b>
 </p>
 
 <p align="center">
@@ -439,6 +435,8 @@ Contributions, bug reports, and feature requests are welcome!
 Copyright © 2026 **Hmkk69**.
 
 Distributed under the **MIT License**. See [`LICENSE`](https://github.com/hmkk69/locket.js/blob/main/LICENSE) for more information.
+
+With permission from the original author of the [LocketLam](https://github.com/leanhminh2104/locketlam) project, I have ported the project to Node.js.
 
 ---
 
