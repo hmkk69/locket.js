@@ -435,7 +435,7 @@ Copyright © 2026 **Hmkk69**.
 
 Distributed under the **MIT License**. See [`LICENSE`](https://github.com/hmkk69/locket.js/blob/main/LICENSE) for more information.
 
-With permission from the original author of the [LocketLam](https://github.com/leanhminh2104/locketlam) project, I have ported the project to Node.js.
+With the permission of the original project owner, [LocketLam](https://github.com/leanhminh2104/locketlam), I have ported the project to Node.js for those who do not use Python or would prefer to use Node.js.
 
 ---
 
