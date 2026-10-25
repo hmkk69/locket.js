@@ -1,0 +1,30 @@
+{
+  "name": "locket.js",
+  "version": "0.0.1",
+  "description": "Unofficial Node.js API client for Locket Camera with full iOS device emulation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test tests/*.js"
+  },
+  "keywords": [
+    "locket",
+    "locket-camera",
+    "locket-api",
+    "locketjs",
+    "ios-client",
+    "reverse-engineered"
+  ],
+  "author": "LAMDev x DaLyMMO.com",
+  "homepage": "https://github.com/hmkk69/locket.js",
+  "license": "MIT",
+  "dependencies": {
+    "sharp": "^0.33.5",
+    "ws": "^8.18.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "allowScripts": {
+    "sharp@0.33.5": true
+  }
+}
