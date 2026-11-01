@@ -428,6 +428,12 @@ Contributions, bug reports, and feature requests are welcome!
 
 > *Every contribution, no matter how small, is deeply appreciated. Thank you very much! *
 
+## Contributors
+
+Thanks to everyone who contributed to this project.
+
+- [@huuhieu17](https://github.com/huuhieu17) — Added paginated `getMoments()` support with cursor-based pagination, Firestore parsing helpers, and related tests.
+
 ---
 
 ## Copyright & license
