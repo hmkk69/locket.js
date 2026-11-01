@@ -56,18 +56,18 @@
 
 ## Tính năng nổi bật
 
-- **Giả Lập Thiết Bị Apple iOS Chuẩn 100%**: Gửi chính xác định danh phần cứng iPhone (iPhone 13 Pro đến iPhone 15 Pro Max), bundle ID (`com.locket.Locket`), Firebase GMPID và các cờ phân tích Google Protobuf, giúp tài khoản không bao giờ bị khóa hay chặn.
-- **Tối Ưu Hóa Video Tự Động (Auto-Compression)**:
+- **Giả lập thiết bị Apple iOS chuẩn 100%**: Gửi chính xác định danh phần cứng iPhone (iPhone 13 Pro đến iPhone 15 Pro Max), bundle ID (`com.locket.Locket`), Firebase GMPID và các cờ phân tích Google Protobuf, giúp tài khoản không bao giờ bị khóa hay chặn.
+- **Tối ưu hóa video tự động (Auto-Compression)**:
  - Tự động nén chuẩn **H.265 / HEVC (`-tag:v hvc1`)** nguyên bản của Apple.
  - **Giữ nguyên 100% độ phân giải gốc** (Full HD, 2K, 4K), nén video từ 70MB - 100MB xuống an toàn dưới **6 MB** của Locket.
  - Chuẩn hóa tốc độ khung hình **24 FPS** và chu kỳ **Keyframe GOP 2 giây** chống giật khựng khi xem stream trên feed.
  - Hỗ trợ video dài từ **15s, 1 phút đến 5 - 10 phút**.
-- **Tùy Biến Caption & Dải Màu Gradient Rực Rỡ**:
+- **Tùy biến caption & dải màu gradient rực rỡ**:
  - Hỗ trợ hơn **158+ bộ màu & biểu tượng preset có sẵn** của Locket (`NoteType`), cho phép tùy chỉnh chữ tùy ý hoặc tự phối dải màu Gradient hex riêng.
  - Hỗ trợ tự do tùy biến dải màu gradient (`colors=['#HEX1', '#HEX2']`), màu chữ (`text_color`) và biểu tượng emoji (`icon`).
-- **Tự Động Làm Mới Token (Autonomous Refresh)**: Tự động phát hiện và làm mới Firebase JWT `idToken` chạy ngầm.
-- **Hỗ Trợ WebSocket Thời Gian Thực**: Lắng nghe tin nhắn chat trực tiếp theo thời gian thực qua kênh `wss://api.locketcamera.com/wss_v2/chat`.
-- **Cài Đặt 1 Bước**: Kèm sẵn công cụ xử lý FFmpeg độc lập thông qua `imageio-ffmpeg`, người dùng không cần cài đặt FFmpeg thủ công vào hệ thống.
+- **Tự động làm mới token (Autonomous Refresh)**: Tự động phát hiện và làm mới Firebase JWT `idToken` chạy ngầm.
+- **Hỗ trợ WebSocket thời gian thực**: Lắng nghe tin nhắn chat trực tiếp theo thời gian thực qua kênh `wss://api.locketcamera.com/wss_v2/chat`.
+- **Cài đặt 1 bước**: Kèm sẵn công cụ xử lý FFmpeg độc lập thông qua `imageio-ffmpeg`, người dùng không cần cài đặt FFmpeg thủ công vào hệ thống.
 
 ---
 
