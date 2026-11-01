@@ -1,10 +1,12 @@
 {
   "name": "locket.js",
-  "version": "0.0.1",
-  "description": "Unofficial Node.js API client for Locket Camera with full iOS device emulation.",
+  "version": "0.0.2",
+  "description": "Unofficial Node.js SDK client for Locket Camera",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
-    "test": "node --test tests/*.js"
+    "test": "node --test tests/*.js",
+    "lint": "node --check index.js && node --check lib/**/*.js"
   },
   "keywords": [
     "locket",

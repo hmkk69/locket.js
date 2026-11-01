@@ -57,11 +57,11 @@
 
 ## Key features
 
-- **100% Authentic iOS Hardware Emulation**: Sends real iPhone hardware identifiers (iPhone 13 Pro through iPhone 15 Pro Max), bundle IDs (`com.locket.Locket`), Firebase GMPIDs, and Google Protobuf analytics flags to ensure requests are never blocked or flagged.
-- **Autonomous Token Renewal**: Automatic background Firebase JWT `idToken` refreshing whenever a token is near expiry.
-- **Smart Media Pipeline**: Built-in Pillow conversion automatically transforms `.jpg`, `.png`, and other standard formats into Locket-optimized `.webp` format, uploaded via Google Cloud Storage Resumable protocol.
-- **Real-Time WebSocket Support**: Asynchronous live event listener for direct chat messages via `wss://api.locketcamera.com/wss_v2/chat`.
-- **Defensive Architecture**: Strongly-typed exceptions (`AuthenticationError`, `StorageUploadError`, `LocketAPIError`) for robust error handling.
+- **100% authentic iOS hardware emulation**: Sends real iPhone hardware identifiers (iPhone 13 Pro through iPhone 15 Pro Max), bundle IDs (`com.locket.Locket`), Firebase GMPIDs, and Google Protobuf analytics flags to ensure requests are never blocked or flagged.
+- **Autonomous token renewal**: Automatic background Firebase JWT `idToken` refreshing whenever a token is near expiry.
+- **Smart media pipeline**: Built-in Pillow conversion automatically transforms `.jpg`, `.png`, and other standard formats into Locket-optimized `.webp` format, uploaded via Google Cloud Storage Resumable protocol.
+- **Real-time WebSocket support**: Asynchronous live event listener for direct chat messages via `wss://api.locketcamera.com/wss_v2/chat`.
+- **Defensive architecture**: Strongly-typed exceptions (`AuthenticationError`, `StorageUploadError`, `LocketAPIError`) for robust error handling.
 
 ---
 
@@ -91,28 +91,29 @@ npm install .
 
 ## Quick start
 
-```python
-from locket.js import LocketClient
+```js
+const { LocketClient } = require("locket.js");
 
-# 1. Initialize client (auto-loads locket.js_session.json if available)
-client = LocketClient(session_path="locket.js_session.json")
+// 1. Initialize client (auto-loads locket.js_session.json if available)
+const client = new LocketClient({ sessionPath: "locket.js_session.json" });
 
-# 2. Authenticate if first time
-if not client.is_authenticated():
-    client.login("your_email@gmail.com", "your_password")
-    print("Logged in successfully! User UID:", client.session.uid)
+// 2. Authenticate if first time
+if (!client.isAuthenticated()) {
+  await client.login("your_email@gmail.com", "your_password");
+  console.log("Logged in successfully! User UID:", client.session.uid);
+}
 
-# 3. Fetch profile
-profile = client.user.get_profile()
-print(f"Welcome, {profile.get('first_name')} {profile.get('last_name')} (@{profile.get('username')})")
+// 3. Fetch profile
+const profile = await client.user.getProfile();
+console.log(`Welcome, ${profile.first_name} ${profile.last_name} (@${profile.username})`);
 
-# 4. Post a moment photo
-moment = client.moments.post(
-    image="daily_snapshot.jpg",
-    caption="Captured with locket.js! ✨",
-    is_private=False
-)
-print("Moment posted successfully! ID:", moment.get("canonical_uid"))
+// 4. Post a moment photo
+const moment = await client.moments.post({
+  image: "daily_snapshot.jpg",
+  caption: "Captured with locket.js! ✨",
+  isPrivate: false
+});
+console.log("Moment posted successfully! ID:", moment.canonical_uid);
 ```
 
 ---
