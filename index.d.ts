@@ -72,7 +72,7 @@ export class LocketAPIError extends LocketError { statusCode: number | null; res
 export class StorageUploadError extends LocketError {}
 
 export class UserModule { constructor(client: LocketClient); [key: string]: any; }
-export class MomentsModule { constructor(client: LocketClient); [key: string]: any; }
+export class MomentsModule { constructor(client: LocketClient); getMoments(options?: { filteredByUserId?: string | null; limit?: number; pageToken?: string | null }): Promise<{ moments: any[]; nextPageToken: string | null }>; [key: string]: any; }
 export class FriendsModule { constructor(client: LocketClient); [key: string]: any; }
 export class ChatModule { constructor(client: LocketClient); [key: string]: any; ReactionEmoji: any; }
 export class NoteType { static [key: string]: string; }
