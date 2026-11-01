@@ -1,6 +1,6 @@
 {
   "name": "locket.js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Unofficial Node.js SDK client for Locket Camera",
   "main": "index.js",
   "types": "index.d.ts",
@@ -17,6 +17,9 @@
     "reverse-engineered"
   ],
   "author": "Hmkk69",
+  "contributors": [
+    "huuhieu17 (https://github.com/huuhieu17)"
+  ],
   "homepage": "https://github.com/hmkk69/locket.js",
   "license": "MIT",
   "dependencies": {
