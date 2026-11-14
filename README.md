@@ -1,449 +1,350 @@
-﻿# Locket.js - The unofficial Node.js SDK for Locket Camera
+# locket.js - The unofficial Node.js SDK for Locket Camera
 
 <p align="center">
- <b>Unofficial Node.js client library for Locket Camera</b>
+  <b>Unofficial Node.js SDK for the Locket Camera backend</b><br>
+  Interact with Locket accounts programmatically - moments, chat, friends, profiles - in pure JavaScript.
 </p>
 
 <p align="center">
- <a href="https://www.npmjs.com/package/locket.js"><img src="https://img.shields.io/npm/v/locket.js.svg?style=flat-square&color=blue" alt="npm Version"></a>
- <a href="https://www.npmjs.com/package/locket.js"><img src="https://img.shields.io/node/v/locket.js.svg?style=flat-square" alt="Node Version"></a>
- <a href="https://github.com/hmk8386/locket.js/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License MIT"></a>
- <a href="https://www.npmjs.com/package/locket.js"><img src="https://img.shields.io/npm/dm/locket.js.svg?style=flat-square" alt="Downloads"></a>
- <a href="https://github.com/hmk8386/locket.js/blob/main/README_VI.md"><img src="https://img.shields.io/badge/Language-Vietnamese-red.svg?style=flat-square" alt="Vietnamese Docs"></a>
+  <a href="https://www.npmjs.com/package/locket.js"><img src="https://img.shields.io/npm/v/locket.js.svg?style=flat-square&color=blue" alt="npm Version"></a>
+  <a href="https://www.npmjs.com/package/locket.js"><img src="https://img.shields.io/node/v/locket.js.svg?style=flat-square" alt="Node Version"></a>
+  <a href="https://github.com/hmk8386/locket.js/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License: MIT"></a>
+  <a href="https://www.npmjs.com/package/locket.js"><img src="https://img.shields.io/npm/dm/locket.js.svg?style=flat-square" alt="Downloads"></a>
+  <a href="README_VI.md"><img src="https://img.shields.io/badge/Language-Vietnamese-red.svg?style=flat-square" alt="Vietnamese Docs"></a>
 </p>
 
 ---
 
-## Documentation map
+## Documentation
 
-> **You are here: README** - the front page. Read this to understand what the library does and whether it suits your needs.
-
-| If you want to... | Go to |
+| Document | Description |
 |:---|:---|
-| **Install & run your first snippet** | You're in the right place - see [Quick Start](#-quick-start) below |
-| **Integrate into your project step by step** | [INTEGRATION.md](https://github.com/hmk8386/locket.js/blob/main/docs/INTEGRATION.md) (EN) · [INTEGRATION_VI.md](https://github.com/hmk8386/locket.js/blob/main/docs/INTEGRATION_VI.md) (VI) |
-| **Look up a specific method / parameter** | [FEATURES.md](https://github.com/hmk8386/locket.js/blob/main/docs/FEATURES.md) (EN) · [FEATURES_VI.md](https://github.com/hmk8386/locket.js/blob/main/docs/FEATURES_VI.md) (VI) |
-| **Copy-paste complete working scripts** | [examples/en/](https://github.com/hmk8386/locket.js/tree/main/examples/en/) (EN) · [examples/vi/](https://github.com/hmk8386/locket.js/tree/main/examples/vi/) (VI) |
-| **Read this page in Vietnamese** | [README_VI.md](https://github.com/hmk8386/locket.js/blob/main/README_VI.md) |
-
----
+| [README.md](README.md) | Overview, installation & quick start (you are here) |
+| [README_VI.md](README_VI.md) | This page in Vietnamese |
+| [docs/INTEGRATION.md](docs/INTEGRATION.md) · [VI](docs/INTEGRATION_VI.md) | Step-by-step integration guide |
+| [docs/FEATURES.md](docs/FEATURES.md) · [VI](docs/FEATURES_VI.md) | Full API catalog - every class, method and parameter |
 
 ## Table of contents
 
-- [Overview](#-overview)
-- [Key features](#-key-features)
-- [Installation](#-installation)
-- [Quick start](#-quick-start)
-- [Comprehensive API reference](#-comprehensive-api-reference)
- - [1. Authentication & session management](#1-authentication--session-management)
- - [2. User profile management](#2-user-profile-management)
- - [3. Moments (feed & uploads)](#3-moments-feed--uploads)
- - [4. Friends, groups & blocking](#4-friends-groups--blocking)
- - [5. Chat & real-time WebSockets](#5-chat--real-time-websockets)
- - [6. Device profile customization](#6-device-profile-customization)
- - [7. Error handling](#7-error-handling)
-- [Examples](#-examples)
-- [Contributing](#-contributing)
-- [Copyright & license](#-copyright--license)
-- [Disclaimer](#-disclaimer)
+- [Overview](#overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Quick start](#quick-start)
+- [API reference](#api-reference)
+  - [1. Authentication & sessions](#1-authentication--sessions)
+  - [2. User profile](#2-user-profile)
+  - [3. Moments (feed & uploads)](#3-moments-feed--uploads)
+  - [4. Friends, groups & blocking](#4-friends-groups--blocking)
+  - [5. Chat & real-time WebSockets](#5-chat--real-time-websockets)
+  - [6. Device profile customization](#6-device-profile-customization)
+  - [7. Error handling](#7-error-handling)
+- [Project structure](#project-structure)
+- [Testing](#testing)
+- [Contributing](#contributing)
+- [License](#license)
+- [Disclaimer](#disclaimer)
 
 ---
 
 ## Overview
 
-**`locket.js`** is a reverse-engineered Node.js SDK designed to provide direct programmatic access to the Locket Camera backend. It allows developers, bot creators, and automation engineers to interact seamlessly with Locket accounts using pure JavaScript, without needing an iOS device running.
+**`locket.js`** is a reverse-engineered Node.js SDK that provides direct programmatic access to the Locket Camera backend. It allows developers, bot creators, and automation engineers to interact with Locket accounts from Node.js - without an iOS device.
 
----
+> **Status:** pre-1.0 (`0.0.x`). APIs may change between minor versions. See [Disclaimer](#disclaimer).
 
-## Key features
+## Features
 
-- **100% authentic iOS hardware emulation**: Sends real iPhone hardware identifiers (iPhone 13 Pro through iPhone 15 Pro Max), bundle IDs (`com.locket.Locket`), Firebase GMPIDs, and Google Protobuf analytics flags to ensure requests are never blocked or flagged.
-- **Autonomous token renewal**: Automatic background Firebase JWT `idToken` refreshing whenever a token is near expiry.
-- **Smart media pipeline**: Built-in Pillow conversion automatically transforms `.jpg`, `.png`, and other standard formats into Locket-optimized `.webp` format, uploaded via Google Cloud Storage Resumable protocol.
-- **Real-time WebSocket support**: Asynchronous live event listener for direct chat messages via `wss://api.locketcamera.com/wss_v2/chat`.
-- **Defensive architecture**: Strongly-typed exceptions (`AuthenticationError`, `StorageUploadError`, `LocketAPIError`) for robust error handling.
-
----
+- **Authentic iOS emulation** - real iPhone hardware identifiers (iPhone 13 Pro → iPhone 15 Pro Max), bundle ID (`com.locket.Locket`), Firebase GMPID and Protobuf analytics payloads.
+- **Autonomous token renewal** - Firebase JWT `idToken` is refreshed automatically in the background before expiry.
+- **Smart media pipeline** - images are converted to Locket-optimized `.webp` via [`sharp`](https://sharp.pixelplumbing.com/) and uploaded through Google Cloud Storage Resumable protocol. Videos are auto-compressed to HEVC < 6 MB.
+- **Real-time chat** - live message listener over `wss://api.locketcamera.com/wss_v2/chat` with auto-reconnect.
+- **158+ caption presets** - gradient pill badges via `NoteType` and `caption_presets.json`, plus custom icons and colors.
+- **Typed errors** - `AuthenticationError`, `StorageUploadError`, `LocketAPIError` for predictable failure handling.
 
 ## Installation
-
-Install the library from npm:
 
 ```bash
 npm install locket.js
 ```
 
-Or install with development dependencies:
-
-```bash
-npm install locket.js --save-dev
-```
-
-To install from source in editable mode:
+Install from source:
 
 ```bash
 git clone https://github.com/hmk8386/locket.js.git
 cd locket.js
-npm install .
+npm install
 ```
 
----
+Requires **Node.js >= 18**. `sharp` is required for image processing; `ws` is required only for real-time chat.
 
 ## Quick start
 
 ```js
 const { LocketClient } = require("locket.js");
 
-// 1. Initialize client (auto-loads locket.js_session.json if available)
+(async () => {
+  // 1. Initialize the client (auto-loads locket.js_session.json if present)
+  const client = new LocketClient({ sessionPath: "locket.js_session.json" });
+
+  // 2. Authenticate (first run only - the session is persisted to disk)
+  if (!client.isAuthenticated()) {
+    await client.login("you@example.com", "your_password");
+  }
+
+  // 3. Fetch your profile
+  const profile = await client.user.getProfile();
+  console.log(`Signed in as ${profile.first_name} ${profile.last_name} (@${profile.username})`);
+
+  // 4. Post a photo moment
+  const moment = await client.moments.post({
+    image: "daily_snapshot.jpg",
+    caption: "Captured with locket.js ✨",
+    isPrivate: false,
+  });
+  console.log("Moment posted:", moment.canonical_uid);
+})().catch(console.error);
+```
+
+## API reference
+
+All methods return Promises. The client exposes four feature modules: `client.user`, `client.moments`, `client.friends`, `client.chat`.
+
+### 1. Authentication & sessions
+
+`SessionManager` handles credentials, persisted sessions and JWT lifecycle.
+
+```js
 const client = new LocketClient({ sessionPath: "locket.js_session.json" });
 
-// 2. Authenticate if first time
-if (!client.isAuthenticated()) {
-  await client.login("your_email@gmail.com", "your_password");
-  console.log("Logged in successfully! User UID:", client.session.uid);
+// Login with email and password
+await client.login("you@example.com", "your_password");
+
+// Check authentication state
+if (client.isAuthenticated()) {
+  console.log("UID:", client.session.uid);
 }
 
-// 3. Fetch profile
-const profile = await client.user.getProfile();
-console.log(`Welcome, ${profile.first_name} ${profile.last_name} (@${profile.username})`);
-
-// 4. Post a moment photo
-const moment = await client.moments.post({
-  image: "daily_snapshot.jpg",
-  caption: "Captured with locket.js! ✨",
-  isPrivate: false
-});
-console.log("Moment posted successfully! ID:", moment.canonical_uid);
+// Force a manual token refresh (normally automatic)
+await client.session.refresh();
 ```
 
----
+Sessions are stored as JSON on disk (`0600` permissions on non-Windows) and include the device profile, so subsequent runs skip login entirely.
 
-## Comprehensive API reference
+### 2. User profile
 
-### 1. Authentication & session management
+Access via `client.user`.
 
-The `SessionManager` handles credentials, refresh tokens, and JWT tokens securely.
+```js
+// Get your own profile, or another user's by UID
+const me = await client.user.getProfile();
+const other = await client.user.getProfile("TARGET_USER_UID");
 
-```python
-from locket.js import LocketClient
+// Update display name / birthdate (YYYY-MM-DD)
+await client.user.updateName("Lam", "Dev");
+await client.user.updateBirthdate("2006-04-21");
 
-client = LocketClient(session_path="session.json")
+// Update avatar (local file path/bytes, or a Firebase Storage URL)
+await client.user.updateAvatar("avatar.jpg");
 
-# Login with email and password
-session_data = client.login("email@example.com", "password")
-
-# Check authentication state
-if client.is_authenticated():
-    print("User UID:", client.session.uid)
-    print("Access Token:", client.session.id_token[:20] + "...")
-
-# Force manual token refresh
-client.session.refresh()
+// Sync client data (app version, push notifications)
+await client.user.syncClientData({ pushNotifications: true });
 ```
-
----
-
-### 2. User profile management
-
-Access via `client.user`:
-
-```python
-# 1. Get profile (self or another user by UID)
-my_profile = client.user.get_profile()
-other_profile = client.user.get_profile(user_uid="TARGET_USER_UID")
-
-# 2. Update display name
-client.user.update_name(first_name="Lam", last_name="Dev")
-
-# 3. Update birthdate (format: YYYY-MM-DD)
-client.user.update_birthdate("2006-04-21")
-
-# 4. Update avatar picture
-client.user.update_avatar("https://firebasestorage.googleapis.com/...")
-
-# 5. Sync client data (push notifications, app version)
-client.user.sync_client_data(push_notifications=True)
-```
-
----
 
 ### 3. Moments (feed & uploads)
 
-Access via `client.moments`:
+Access via `client.moments`. `NoteType` exposes the caption pill presets.
 
-```python
-from locket.js import NoteType
+```js
+const { LocketClient, NoteType } = require("locket.js");
 
-# 1. Post a photo moment with rich gradient badge pill (Supports 158+ presets!)
-photo_moment = client.moments.post(
-    image="photo.jpg",                          # File path, bytes, or Storage URL
-    note_type=NoteType.FLEX_DEN_HOI_THO_CUOI,  # Preset pill badge (custom gradient)
-    is_private=False,                          # True = sent only to self (sent_to_self_only)
-    recipients=None                            # Specific friends (or None for all)
-)
+// Post a photo moment with a preset gradient pill caption
+await client.moments.post({
+  image: "photo.jpg",                        // path, Buffer, or Storage URL
+  noteType: NoteType.FLEX_DEN_HOI_THO_CUOI,  // preset pill badge
+  isPrivate: false,                          // true = sent to self only
+  recipients: null,                          // UIDs of specific friends, or null for all
+});
 
-# 2. Post with custom caption, custom gradient colors and custom emoji
-custom_moment = client.moments.post(
-    image="photo.jpg",
-    caption="Coding with AI",
-    icon="⚡",
-    colors=["#FF416C", "#8A2387"],
-    is_private=False
-)
+// Post with a custom caption, emoji and gradient colors
+await client.moments.post({
+  image: "photo.jpg",
+  caption: "Coding with AI",
+  icon: "⚡",
+  colors: ["#FF416C", "#8A2387"],
+});
 
-# 3. Post a video moment (Supports auto-compression HEVC < 6 MB, 15s to 5-10 mins)
-video_moment = client.moments.post(
-    image="thumb.jpg",                          # Video thumbnail image
-    video="clip_10s.mp4",                       # Video file path, bytes, or Storage URL
-    note_type=NoteType.MUSIC                    # Dynamic music overlay
-)
+// Post a video moment (auto-compressed to HEVC < 6 MB)
+await client.moments.post({
+  video: "clip.mp4",                         // thumbnail is extracted automatically
+  noteType: NoteType.MUSIC,
+});
 
-# 4. Retrieve actual shared moments by Username (e.g. latest moments of a friend)
-friend_moments = client.moments.get_posts_by_username("friend_username", limit=10)
-for m in friend_moments:
-    print(m["moment_uid"], m["thumbnail_url"], m["caption"])
+// Paginated moment history (cursor-based)
+const { moments, nextPageToken } = await client.moments.getMoments({ limit: 20 });
 
-# 5. React to a friend's moment with emoji
-client.moments.react(moment_uid="MOMENT_ID", reaction="❤️")
+// Fetch a friend's latest shared moments
+const friendMoments = await client.moments.getSharedMomentsByUsername("friend_username", 10);
 
-# 6. Fetch moment view count and viewer list
-views = client.moments.get_views(moment_uid="MOMENT_ID")
-print("Views count:", views.get("count"))
-print("Viewers:", views.get("moment_views"))
+// React, comment, mark viewed, delete
+await client.moments.react(momentUid, "❤️");
+await client.moments.comment(momentUid, friendUid, "Great shot!");
+await client.moments.markAsViewed(momentUid);
+await client.moments.delete(momentUid);
 
-# 7. Comment on a moment (attaches to moment and appears in direct chat)
-client.moments.comment(
-    moment_uid="MOMENT_ID",
-    receiver_uid="FRIEND_UID",
-    text="Great shot!"
-)
+// View count & viewers
+const views = await client.moments.getViews(momentUid);
 
-# 7. Mark moment as viewed
-client.moments.mark_as_viewed(moment_uid="MOMENT_ID")
-
-# 8. Fetch weekly Rollcall event posts
-rollcall = client.moments.get_rollcall_posts()
-print("Rollcall posts:", rollcall.get("posts", []))
-
-# 9. Fetch latest feed from friends
-feed = client.moments.get_latest()
-for post in feed:
-    print(post.get("user"), post.get("caption"), post.get("thumbnail_url"))
-
-# 10. Delete a moment
-client.moments.delete(moment_uid="MOMENT_CANONICAL_UID")
+// Latest feed from friends
+const feed = await client.moments.getLatest();
 ```
-
----
 
 ### 4. Friends, groups & blocking
 
-Access via `client.friends`:
+Access via `client.friends`.
 
-```python
-# 1. Retrieve all friends with full profile details (UID, Names, Username, Avatar)
-friends = client.friends.get_all_friends()
-for f in friends:
-    print(f"Friend: {f.get('first_name')} (@{f.get('username')}) - UID: {f.get('uid')}")
+```js
+// All friends with full profile details
+const friends = await client.friends.getAllFriends();
 
-# 2. Retrieve groups state
-groups_state = client.friends.get_groups_and_friends()
+// Groups state
+const groups = await client.friends.getGroupsAndFriends();
 
-# 3. Resolve invite token from public profile link (https://locket.cam/<username>)
-token = client.friends.resolve_invite_token_from_username("friend_username")
-print("Invite Token:", token)
+// Resolve a username (locket.cam/<username>) to an invite token / UID
+const token = await client.friends.resolveInviteTokenFromUsername("friend_username");
 
-# 4. Fetch user details from invite token
-user_info = client.friends.fetch_user_by_invite_token(token)
-print("User info:", user_info)
+// Send / accept friend requests
+await client.friends.sendRequestByUsername("friend_username");
+await client.friends.acceptRequest("TARGET_USER_UID");
 
-# 5. Send friend request by username or UID
-client.friends.send_request_by_username("friend_username")
-# Or: client.friends.send_request(user_uid="TARGET_USER_UID")
-
-# 6. Accept incoming friend request
-client.friends.accept_request(user_uid="TARGET_USER_UID")
-
-# 7. Remove (unfriend), Block & Unblock
-client.friends.remove(user_uid="TARGET_USER_UID")
-client.friends.block(user_uid="TARGET_USER_UID")   # Blocks user & automatically unfriends them on Locket
-client.friends.unblock(user_uid="TARGET_USER_UID") # Unblocks user (removes from blocked_users)
+// Remove, block & unblock (accepts UID or @username)
+await client.friends.remove("TARGET_USER_UID");
+await client.friends.block("TARGET_USER_UID");
+await client.friends.unblock("TARGET_USER_UID");
 ```
-
----
 
 ### 5. Chat & real-time WebSockets
 
-Access via `client.chat`:
+Access via `client.chat`. Real-time streaming requires the `ws` package.
 
-```python
-# 1. Send direct message or emoji
-client.chat.send_message(
-    receiver_uid="FRIEND_UID",
-    text="Hey, check out this moment! ❤️"
-)
+```js
+// Send a direct message
+await client.chat.sendMessage({ receiverUid: "FRIEND_UID", text: "Hey! ❤️" });
 
-# 2. Share a moment into chat (standalone or with text)
-# a) Send standalone moment:
-client.chat.send_moment(
-    receiver_uid="FRIEND_UID",
-    moment_uid="MOMENT_UID"  # Your moment UID or a friend's moment UID
-)
+// Share a moment into chat (optionally with text)
+await client.chat.sendMoment("FRIEND_UID", "MOMENT_UID", "Check this out!");
 
-# b) Send moment with accompanying text message:
-client.chat.send_moment(
-    receiver_uid="FRIEND_UID",
-    moment_uid="MOMENT_UID",
-    text="Check out this awesome moment!"
-)
+// Inbox & message history
+const conversations = await client.chat.getConversations();
+const messages = await client.chat.getMessages({ otherUserId: "FRIEND_UID" });
 
-# 3. Get inbox conversations list
-conversations = client.chat.get_conversations()
+// React with a single or multi-emoji combo; remove a reaction
+await client.chat.sendReaction(conversationId, messageId, "❤️");
+await client.chat.sendReaction(conversationId, messageId, "🔥🥰");
+await client.chat.removeReaction(conversationId, messageId);
 
-# 4. Retrieve live chronological messages from server
-messages = client.chat.get_messages(other_user_id="FRIEND_UID")
+// Recall your own message
+await client.chat.deleteMessage(conversationUid, messageUid);
 
-# 4. React with single or multi-emoji combo to a message
-client.chat.send_reaction(conversation_id="CONV_ID", message_id="MSG_ID", emoji="❤️")
-client.chat.send_reaction(conversation_id="CONV_ID", message_id="MSG_ID", emoji="🔥🥰")
+// Mark as read (set sendReadReceipt: false for ghost mode)
+await client.chat.markAsRead({ conversationUid, sendReadReceipt: true });
 
-# 5. Remove / unreact an emoji reaction
-client.chat.remove_reaction(conversation_id="CONV_ID", message_id="MSG_ID")
-
-# 6. Recall / unsend your own message
-client.chat.delete_message(conversation_uid="CONV_ID", message_uid="MSG_ID")
-
-# 7. Mark conversation as read (send_read_receipt=False for Ghost / Incognito mode)
-client.chat.mark_as_read(conversation_uid="CONV_ID", send_read_receipt=True)
-client.chat.mark_as_read(conversation_uid="CONV_ID", send_read_receipt=False)
-
-# 8. Listen to live incoming messages over WebSocket
-import asyncio
-
-async def on_new_message(msg):
-    print("New incoming message:", msg)
-
-# Start event loop
-asyncio.run(client.chat.listen_realtime("FRIEND_UID", on_new_message))
+// Listen for live incoming messages (auto-reconnects)
+await client.chat.listenRealtime("FRIEND_UID", (msg) => {
+  console.log("New message:", msg);
+});
 ```
-
----
 
 ### 6. Device profile customization
 
-By default, `locket.js` picks a realistic iPhone profile. You can also specify custom hardware attributes:
+By default the client emulates a random modern iPhone. Pass a custom `DeviceProfile` for full control:
 
-```python
-from locket.js import LocketClient, DeviceProfile
+```js
+const { LocketClient, DeviceProfile } = require("locket.js");
 
-custom_device = DeviceProfile(
-    model_info={
-        "model": "iPhone16,1",
-        "name": "iPhone 15 Pro",
-        "hw": "hw/iPhone16_1",
-        "ios": "18.1.0"
-    },
-    app_version="2.68.0",
-    build_number="2523"
-)
+const device = new DeviceProfile({
+  modelName: "iPhone 15 Pro",
+  hardwareModel: "iPhone16,1",
+  iosVersion: "18.1.0",
+  appVersion: "2.68.0",
+  buildNumber: "2523",
+});
 
-client = LocketClient(session_path="session.json", device=custom_device)
-print("Emulating:", client.device.user_agent)
+const client = new LocketClient({ sessionPath: "session.json", device });
+console.log("Emulating:", device.userAgent);
 ```
-
----
 
 ### 7. Error handling
 
-All custom exceptions inherit from `LocketError`:
+All custom errors extend `LocketError`:
 
-```python
-from locket.js.exceptions import (
-    LocketError,
-    AuthenticationError,
-    LocketAPIError,
-    StorageUploadError
-)
+```js
+const {
+  LocketError,
+  AuthenticationError,
+  LocketAPIError,
+  StorageUploadError,
+} = require("locket.js");
 
-try:
-    client.login("user@email.com", "wrong_password")
-except AuthenticationError as e:
-    print("Auth Failed:", e)
-except StorageUploadError as e:
-    print("Media Upload Failed:", e)
-except LocketAPIError as e:
-    print(f"API Error (Status {e.status_code}):", e)
-except LocketError as e:
-    print("General Locket Error:", e)
+try {
+  await client.login("you@example.com", "wrong_password");
+} catch (err) {
+  if (err instanceof AuthenticationError) {
+    console.error("Login failed:", err.message);
+  } else if (err instanceof LocketAPIError) {
+    console.error(`API error (HTTP ${err.statusCode}):`, err.message);
+  } else if (err instanceof StorageUploadError) {
+    console.error("Media upload failed:", err.message);
+  } else {
+    throw err;
+  }
+}
 ```
 
----
+## Project structure
 
-## Examples
+```
+locket.js/
+├── index.js              # Public entry point (CommonJS exports)
+├── index.d.ts            # TypeScript declarations
+├── caption_presets.json  # NoteType gradient pill presets
+├── lib/
+│   ├── client.js         # LocketClient - API base, postApi(), wiring
+│   ├── session.js        # SessionManager - Firebase auth, token refresh, persistence
+│   ├── device.js         # DeviceProfile - iPhone hardware/analytics emulation
+│   ├── http.js           # fetchWithTimeout helper
+│   ├── exceptions.js     # LocketError hierarchy
+│   └── modules/
+│       ├── user.js       # Profile, avatar upload, client data
+│       ├── moments.js    # Post/feed/reactions/comments/pagination
+│       ├── friends.js    # Friends, groups, requests, blocking
+│       └── chat.js       # Messages, reactions, real-time WebSocket
+├── docs/                 # Integration guide & full API catalog (EN/VI)
+└── tests/                # node:test unit tests
+```
 
-The [`examples/`](https://github.com/hmk8386/locket.js/tree/main/examples/) directory contains complete, runnable scripts for every feature:
-
-| Feature | Script |
-|:---|:---|
-| Login & Session | [`examples/en/01_login_and_session.py`](https://github.com/hmk8386/locket.js/blob/main/examples/en/01_login_and_session.py) |
-| User Profile | [`examples/en/02_user_profile.py`](https://github.com/hmk8386/locket.js/blob/main/examples/en/02_user_profile.py) |
-| Post Photo & NoteType | [`examples/en/03_post_image_moment.py`](https://github.com/hmk8386/locket.js/blob/main/examples/en/03_post_image_moment.py) |
-| Post Video & HEVC | [`examples/en/04_post_video_moment.py`](https://github.com/hmk8386/locket.js/blob/main/examples/en/04_post_video_moment.py) |
-| Feed & Reactions | [`examples/en/05_feed_views_reactions.py`](https://github.com/hmk8386/locket.js/blob/main/examples/en/05_feed_views_reactions.py) |
-| Friends & Contacts | [`examples/en/06_friends_and_contacts.py`](https://github.com/hmk8386/locket.js/blob/main/examples/en/06_friends_and_contacts.py) |
-| Chat & Real-Time | [`examples/en/07_chat_and_reactions.py`](https://github.com/hmk8386/locket.js/blob/main/examples/en/07_chat_and_reactions.py) |
-| Interactive CLI | [`examples/en/interactive_demo.py`](https://github.com/hmk8386/locket.js/blob/main/examples/en/interactive_demo.py) |
+## Testing
 
 ```bash
-python examples/en/interactive_demo.py
+npm test     # node --test tests/*.js
+npm run lint # syntax-check index.js and lib/
 ```
-
-> For a full step-by-step integration guide, see [`docs/INTEGRATION.md`](https://github.com/hmk8386/locket.js/blob/main/docs/INTEGRATION.md).
-> For the complete API catalog, see [`docs/FEATURES.md`](https://github.com/hmk8386/locket.js/blob/main/docs/FEATURES.md).
-
----
-
-## Next steps
-
-| Document | Description |
-|:---|:---|
-| [ docs/INTEGRATION.md](https://github.com/hmk8386/locket.js/blob/main/docs/INTEGRATION.md) | Step-by-step integration guide with real code snippets for every feature (EN - Primary) |
-| [ docs/INTEGRATION_VI.md](https://github.com/hmk8386/locket.js/blob/main/docs/INTEGRATION_VI.md) | Step-by-step integration guide in Vietnamese (VI - Secondary) |
-| [ docs/FEATURES.md](https://github.com/hmk8386/locket.js/blob/main/docs/FEATURES.md) | Full API catalog - all classes, methods and parameters (EN) |
-| [ docs/FEATURES_VI.md](https://github.com/hmk8386/locket.js/blob/main/docs/FEATURES_VI.md) | Full API catalog in Vietnamese (VI) |
-| [ examples/en/](https://github.com/hmk8386/locket.js/tree/main/examples/en/) | 8 complete runnable example scripts (English) |
-| [ examples/vi/](https://github.com/hmk8386/locket.js/tree/main/examples/vi/) | 8 complete runnable example scripts (Vietnamese) |
-
----
 
 ## Contributing
 
-Contributions, bug reports, and feature requests are welcome!
+Contributions, bug reports and feature requests are welcome.
 
-1. Fork the Project.
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`).
-4. Push to the Branch (`git push origin feature/AmazingFeature`).
-5. Open a Pull Request.
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-> *Every contribution, no matter how small, is deeply appreciated. Thank you very much! *
+Special thanks to [@huuhieu17](https://github.com/huuhieu17) for paginated `getMoments()` support.
 
-## Contributors
+## License
 
-Thanks to everyone who contributed to this project.
-
-- [@huuhieu17](https://github.com/huuhieu17) — Added paginated `getMoments()` support with cursor-based pagination, Firestore parsing helpers, and related tests.
-
----
-
-## Copyright & license
-
-Copyright © 2026 **Hmk8386**.
-
-Distributed under the **MIT License**. See [`LICENSE`](https://github.com/hmk8386/locket.js/blob/main/LICENSE) for more information.
-
----
+Copyright © 2026 **Hmk8386**. Distributed under the [MIT License](LICENSE).
 
 ## Disclaimer
 
-This library is an unofficial, reverse-engineered project created for educational and developer interoperability purposes. It is **not** endorsed by, associated with, or affiliated with Locket Camera, Inc. Please use this tool responsibly and respect Locket Camera's terms of service and community guidelines.
+This library is an unofficial, reverse-engineered project created for educational and interoperability purposes. It is **not** endorsed by, associated with, or affiliated with Locket Camera, Inc. The private API surface it relies on may change or break at any time without notice. Use responsibly and respect Locket Camera's terms of service and community guidelines.
