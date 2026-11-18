@@ -10,7 +10,7 @@
 | **Complete runnable scripts** | [examples/en/](../examples/en/) (EN) · [examples/vi/](../examples/vi/) (VI) |
 | **Vietnamese version of this catalog** | [FEATURES_VI.md](FEATURES_VI.md) |
 
-> **Version**: 0.0.1 · **Package**: [locket.js](https://www.npmjs.com/package/locket.js) · **Author**: Hmk8386 · **License**: MIT
+> **Version**: 0.0.1 · **Package**: [locket.js](https://www.npmjs.com/package/locket.js) · **Author**: Hmk8386 · **License**: PolyForm-Noncommercial-1.0.0
 
 ---
 
@@ -252,5 +252,5 @@ npm publish
 
 Copyright © 2026 **Hmk8386**. All rights reserved.
 
-Distributed under the [MIT License](../LICENSE).
+Distributed under the [PolyForm Noncommercial License 1.0.0](../LICENSE).
 

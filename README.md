@@ -8,7 +8,7 @@
 <p align="center">
   <a href="https://www.npmjs.com/package/locket.js"><img src="https://img.shields.io/npm/v/locket.js.svg?style=flat-square&color=blue" alt="npm Version"></a>
   <a href="https://www.npmjs.com/package/locket.js"><img src="https://img.shields.io/node/v/locket.js.svg?style=flat-square" alt="Node Version"></a>
-  <a href="https://github.com/hmk8386/locket.js/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License: MIT"></a>
+  <a href="https://github.com/hmk8386/locket.js/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-PolyForm--Noncommercial--1.0.0-blue.svg?style=flat-square" alt="License: PolyForm Noncommercial 1.0.0"></a>
   <a href="https://www.npmjs.com/package/locket.js"><img src="https://img.shields.io/npm/dm/locket.js.svg?style=flat-square" alt="Downloads"></a>
   <a href="README_VI.md"><img src="https://img.shields.io/badge/Language-Vietnamese-red.svg?style=flat-square" alt="Vietnamese Docs"></a>
 </p>
@@ -343,7 +343,7 @@ Special thanks to [@huuhieu17](https://github.com/huuhieu17) for paginated `getM
 
 ## License
 
-Copyright © 2026 **Hmk8386**. Distributed under the [MIT License](LICENSE).
+Copyright © 2026 **Hmk8386**. Distributed under the [PolyForm Noncommercial License 1.0.0](LICENSE).
 
 ## Disclaimer
 

@@ -10,7 +10,7 @@
 | **Script mẫu chạy được ngay** | [examples/vi/](../examples/vi/) (VI) · [examples/en/](../examples/en/) (EN) |
 | **Bản tiếng Anh (Bản chính)** | [FEATURES.md](FEATURES.md) |
 
-> **Phiên bản**: 0.0.1 · **Gói npm**: [locket.js](https://www.npmjs.com/package/locket.js) · **Tác giả**: Hmk8386 · **Giấy phép**: MIT
+> **Phiên bản**: 0.0.1 · **Gói npm**: [locket.js](https://www.npmjs.com/package/locket.js) · **Tác giả**: Hmk8386 · **Giấy phép**: PolyForm-Noncommercial-1.0.0
 
 
 ## Mục lục
@@ -286,5 +286,5 @@ npm publish
 
 Bản quyền © 2026 **Hmk8386**. Tất cả các quyền được bảo lưu.
 
-Phát hành theo giấy phép mã nguồn mở [MIT License](../LICENSE).
+Phát hành theo giấy phép [PolyForm Noncommercial License 1.0.0](../LICENSE).
 

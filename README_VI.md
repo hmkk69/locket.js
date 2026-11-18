@@ -7,7 +7,7 @@
 <p align="center">
  <a href="https://www.npmjs.com/package/locket.js"><img src="https://img.shields.io/npm/v/locket.js.svg?style=flat-square&color=blue" alt="npm Version"></a>
  <a href="https://www.npmjs.com/package/locket.js"><img src="https://img.shields.io/node/v/locket.js.svg?style=flat-square" alt="Node Version"></a>
- <a href="https://github.com/hmk8386/locket.js/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License MIT"></a>
+ <a href="https://github.com/hmk8386/locket.js/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-PolyForm--Noncommercial--1.0.0-blue.svg?style=flat-square" alt="License PolyForm Noncommercial 1.0.0"></a>
  <a href="https://github.com/hmk8386/locket.js/blob/main/README.md"><img src="https://img.shields.io/badge/Language-English-blue.svg?style=flat-square" alt="English Docs"></a>
 </p>
 
@@ -297,7 +297,7 @@ Mọi đóng góp, báo lỗi và yêu cầu tính năng đều được chào �
 
 Bản quyền © 2026 **Hmk8386**.
 
-Phát hành theo giấy phép **MIT License**. Xem file [`LICENSE`](https://github.com/hmk8386/locket.js/blob/main/LICENSE) để biết thêm chi tiết.
+Phát hành theo giấy phép **PolyForm Noncommercial License 1.0.0**. Xem file [`LICENSE`](https://github.com/hmk8386/locket.js/blob/main/LICENSE) để biết thêm chi tiết.
 
 Được sự đồng ý của chủ dự án gốc [LocketLam](https://github.com/leanhminh2104/locketlam), mình đã port dự án sang Node.js để cho ai không dung Python hoặc muốn dung Node.js.
 ---

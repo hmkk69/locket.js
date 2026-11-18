@@ -444,5 +444,5 @@ python examples/vi/interactive_demo.py
 
 Bản quyền © 2026 **Hmk8386**. Tất cả các quyền được bảo lưu.
 
-Dự án được phân phối chính thức theo giấy phép mã nguồn mở [MIT License](../LICENSE).
+Dự án được phân phối chính thức theo giấy phép [PolyForm Noncommercial License 1.0.0](../LICENSE).
 Mọi đóng góp và báo lỗi xin gửi về [GitHub Issues](https://github.com/hmk8386/locket.js/issues).

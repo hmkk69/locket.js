@@ -21,7 +21,7 @@
     "huuhieu17 (https://github.com/huuhieu17)"
   ],
   "homepage": "https://github.com/hmk8386/locket.js",
-  "license": "MIT",
+  "license": "PolyForm-Noncommercial-1.0.0",
   "dependencies": {
     "sharp": "^0.33.5",
     "ws": "^8.18.0"
